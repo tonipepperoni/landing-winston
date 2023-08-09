@@ -31,7 +31,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <RootHeader />
       <body
-        className={`${dmSans.variable} ${spaceMono.variable} lg:top-[150px] lg:relative bg-secondary`}
+        className={`${dmSans.variable} ${spaceMono.variable} md:top-[150px] md:relative bg-secondary`}
       >
         <PageHeader />
         <div className={`bg-white`}>{children}</div>
