@@ -14,7 +14,7 @@ export default function MobileHeader({ className }: HeaderProps) {
   return (
     <header
       className={clsx(
-        "flex flex-row justify-between navbar sticky top-0 w-full z-[9999] h-[90px] bg-secondary fixed ",
+        "flex flex-row justify-between navbar top-0 w-full z-[9999] h-[90px] bg-secondary fixed ",
         className,
       )}
     >
