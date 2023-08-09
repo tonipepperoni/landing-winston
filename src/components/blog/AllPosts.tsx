@@ -1,7 +1,8 @@
 import { Text } from "../ui/text";
 import { PostPreview } from "./PostPreview";
+import { Blog } from "../../types";
 
-export const AllPosts = ({ blogs }) => {
+export const AllPosts = ({ blogs }: { blogs: Blog[] }) => {
   return (
     <div className={"flex flex-col gap-[42px] w-full mb-[280px]"}>
       <Text className={"text-[40px] font-bold"} color={"secondary"}>
@@ -16,7 +17,7 @@ export const AllPosts = ({ blogs }) => {
       >
         {blogs.map((post) => {
           return (
-            <div key={post}>
+            <div key={post.id}>
               <PostPreview title={post.title} id={post.id} />
             </div>
           );

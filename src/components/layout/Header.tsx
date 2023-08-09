@@ -1,5 +1,4 @@
 import { navigationLinks } from "../../constants/navigation-links";
-import Link from "next/link";
 import { Button } from "../ui/button";
 import { Text } from "../ui/text";
 import { Logo } from "./Logo";

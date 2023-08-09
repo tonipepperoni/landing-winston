@@ -3,6 +3,8 @@ import React from "react";
 import { LatestPosts } from "../components/blog/LatestPosts";
 import { RecommendedPosts } from "../components/blog/RecommendedPosts";
 import { AllPosts } from "../components/blog/AllPosts";
+import { Blog } from "../types";
+
 async function getData() {
   const res = await fetch(`https://dummyjson.com/posts`);
   return res.json();
@@ -10,9 +12,9 @@ async function getData() {
 
 export default async function App() {
   const { posts } = await getData();
-
-  const latest = posts.splice(0, 6);
-  const recommended = posts.splice(6, 10);
+  const blogPosts = posts as Blog[];
+  const latest = blogPosts.splice(0, 6);
+  const recommended = blogPosts.splice(6, 10);
   return (
     <div
       className={
@@ -22,7 +24,7 @@ export default async function App() {
       <BlogActions />
       <LatestPosts blogs={latest} />
       <RecommendedPosts blogs={recommended} />
-      <AllPosts blogs={posts} />
+      <AllPosts blogs={blogPosts} />
     </div>
   );
 }

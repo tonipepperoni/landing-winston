@@ -1,6 +1,5 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { LinkItem } from "./LinkItem";
 import { navigationLinks } from "../../../constants/navigation-links";
 import { usePathname } from "next/navigation";

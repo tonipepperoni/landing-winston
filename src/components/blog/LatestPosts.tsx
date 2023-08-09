@@ -2,8 +2,9 @@
 import { Text } from "../ui/text";
 import { PostPreview } from "./PostPreview";
 import useMediaQuery from "../../hooks/useMediaQuery";
+import { Blog } from "../../types";
 
-export const LatestPosts = ({ blogs }: any[]) => {
+export const LatestPosts = ({ blogs }: { blogs: Blog[] }) => {
   const isXlScreen = useMediaQuery("(min-width: 1280px)");
 
   return (
